@@ -32,7 +32,7 @@ namespace MasterDiploma_FuzzyAssociationRules.Fuzzy_Sets
             {MembershipFuctionType.Trapezoidal, 4}
         };
 
-        public double MembershipFuction(double point)
+        public double MembershipFunction(double point)
         {
             return MembershipFuctionType switch
             {
