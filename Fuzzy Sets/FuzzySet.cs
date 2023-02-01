@@ -23,6 +23,7 @@ namespace MasterDiploma_FuzzyAssociationRules.Fuzzy_Sets
 
         public string Label { get; }
 
+
         public double[] Points { get; }
 
         public MembershipFuctionType MembershipFuctionType { get; }

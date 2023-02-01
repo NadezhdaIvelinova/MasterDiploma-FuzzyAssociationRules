@@ -1,0 +1,25 @@
+{
+  "dbConnectionString": "Data Source=.;Initial Catalog=DiplomaAssociativeRules;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False",
+  "rawDataTableName": "Data",
+  "shouldFuzzify": "false",
+  "usePreComputedRules": "false",
+  "largeItemSetTreshold": "0.8",
+  "ruleTreshold": "0.2",
+  "addFuzzifiedTableToDb": "true",
+  "groupRulesByTheirRHS": "true",
+  "takeTopNFromEachGroup": "1",
+  "outputTopNRules": "0",
+  "columns": [
+    "Availability",
+    "Performance",
+    "EaseOfUse",
+    "Predictability",
+    "Efficiency",
+    "Understandability",
+    "VisualDesign",
+    "Requirements",
+    "Documentation",
+    "Support",
+    "NPS"
+  ]
+}
