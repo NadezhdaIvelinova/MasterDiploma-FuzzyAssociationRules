@@ -15,9 +15,14 @@ class Program
         DataTable fuzzyfiedTable;
         if (settings.ShouldFuzzify)
         {
-            var fuzzification = new Fuzzification();
+            Fuzzification fuzzification;
+            if (settings.FuzzyParameters != null)
+                fuzzification = new Fuzzification(settings.FuzzyParameters);
+            else
+                fuzzification = new Fuzzification();
+
             fuzzyfiedTable = fuzzification.FuzzifyTable(rawTable);
-            
+
 
             if (settings.AddFuzzifiedTableToDb)
                 repo.CreateFuzzySqlTable(fuzzyfiedTable);

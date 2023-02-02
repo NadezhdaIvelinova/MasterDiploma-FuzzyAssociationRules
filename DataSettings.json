@@ -9,17 +9,59 @@
   "groupRulesByTheirRHS": "true",
   "takeTopNFromEachGroup": "1",
   "outputTopNRules": "0",
-  "columns": [
-    "Availability",
-    "Performance",
-    "EaseOfUse",
-    "Predictability",
-    "Efficiency",
-    "Understandability",
-    "VisualDesign",
-    "Requirements",
-    "Documentation",
-    "Support",
-    "NPS"
+  "fuzzyParameters": [
+    {
+      "appliesToColumns": [
+        "Availability",
+        "Performance",
+        "EaseOfUse",
+        "Predictability",
+        "Efficiency",
+        "Understandability",
+        "VisualDesign",
+        "Requirements",
+        "Documentation",
+        "Support"
+      ],
+      "sets": [
+        {
+          "type": "Trapezoidal",
+          "label": "DISAGREE",
+          "points": [ 1, 1, 1.84, 4 ]
+        },
+        {
+          "type": "Trapezoidal",
+          "label": "NEUTRAL",
+          "points": [ 1.84, 3.08, 4.92, 6.16 ]
+        },
+        {
+          "type": "Trapezoidal",
+          "label": "AGREE",
+          "points": [ 4, 6.16, 7, 7 ]
+        }
+      ]
+    },
+    {
+      "appliesToColumns": [
+        "NPS"
+      ],
+      "sets": [
+        {
+          "type": "Trapezoidal",
+          "label": "DISTRACTOR",
+          "points": [ 0, 0, 6, 6.1 ]
+        },
+        {
+          "type": "Trapezoidal",
+          "label": "NEUTRAL",
+          "points": [ 7, 7, 8, 8.1 ]
+        },
+        {
+          "type": "Trapezoidal",
+          "label": "PROMOTER",
+          "points": [ 9, 9, 10, 10.1 ]
+        }
+      ]
+    }
   ]
 }
