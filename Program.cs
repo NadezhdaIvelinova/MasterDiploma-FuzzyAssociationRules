@@ -1,4 +1,5 @@
 ﻿using MasterDiploma_FuzzyAssociationRules;
+using MasterDiploma_FuzzyAssociationRules.AssociativeRules;
 using MasterDiploma_FuzzyAssociationRules.Fuzzy_Sets;
 using System.Data;
 
@@ -31,7 +32,7 @@ class Program
         {
             fuzzyfiedTable = rawTable;
         }
-        /*
+        
         double frequentItemSetsTreshold = settings.LargeItemSetTreshold;
         IEnumerable<ItemSet> mostFrequentItemSets;
         if (settings.UsePreComputedRules)
@@ -59,6 +60,5 @@ class Program
         foreach (var rulePair in bestRulePairs)
             Console.WriteLine($"CF: {rulePair.CertaintyFactor}; Rule: " +
                 $"{string.Join(',', rulePair.Rule.LHS.Items)} => {string.Join(',', rulePair.Rule.RHS.Items)}");
-        */
     }
 }

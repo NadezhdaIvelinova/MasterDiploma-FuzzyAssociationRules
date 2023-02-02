@@ -13,7 +13,7 @@ namespace MasterDiploma_FuzzyAssociationRules
         public string[] Columns { get; set; }
         public string RawDataTableName { get; set; }
         public bool ShouldFuzzify { get; set; }
-        //public bool UsePreComputedRules { get; set; }
+        public bool UsePreComputedRules { get; set; }
         public double LargeItemSetTreshold { get; set; }
         public double RuleTreshold { get; set; }
         public bool AddFuzzifiedTableToDb { get; set; }
