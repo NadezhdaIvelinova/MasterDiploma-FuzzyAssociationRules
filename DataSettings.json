@@ -1,7 +1,7 @@
 {
   "dbConnectionString": "Data Source=.;Initial Catalog=DiplomaAssociativeRules;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False",
   "rawDataTableName": "Data",
-  "shouldFuzzify": "false",
+  "shouldFuzzify": "true",
   "usePreComputedRules": "false",
   "largeItemSetTreshold": "0.8",
   "ruleTreshold": "0.2",

@@ -22,7 +22,7 @@ namespace MasterDiploma_FuzzyAssociationRules.Fuzzy_Sets
 
         public List<FuzzySet> FuzzySets { get; set; }
 
-        /*
+        
         public DataTable FuzzifyTable(DataTable dataTable)
         {
             var newDataTable = new DataTable();
@@ -32,7 +32,7 @@ namespace MasterDiploma_FuzzyAssociationRules.Fuzzy_Sets
             InitializeRows(dataTable, newDataTable, oldColumnNames);
             return newDataTable;
         }
-        */
+        
 
         //Define Trapezoidal Membership Fuction
         public IEnumerable<(string label, double[] definingPoints)> TrapezoidalParameters { get; } = new []
@@ -50,6 +50,7 @@ namespace MasterDiploma_FuzzyAssociationRules.Fuzzy_Sets
                 var set = new FuzzySet(setParameter.label, setParameter.definingPoints, membershipFuctionType);
                 FuzzySets.Add(set);
             }
+
         }
 
         private void InitializeColumns(DataTable newDataTable, string[] oldColumnNames)
@@ -74,7 +75,7 @@ namespace MasterDiploma_FuzzyAssociationRules.Fuzzy_Sets
                     foreach (var fuzzySet in FuzzySets)
                     {
                         var newColumnName = NewColumnName(oldColumnName, fuzzySet.Label);
-                        byte oldValue = (byte)row[oldColumnName];
+                        byte oldValue = (byte)(int)row[oldColumnName];
                         var fuzzyValue = fuzzySet.MembershipFunction(oldValue);
                         newRow[newColumnName] = fuzzyValue;
                     }
