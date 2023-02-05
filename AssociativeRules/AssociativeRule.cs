@@ -49,7 +49,9 @@ namespace MasterDiploma_FuzzyAssociationRules.AssociativeRules
             double minSoFar = 1;
             foreach (var item in LHS)
             {
-                minSoFar = Math.Min(minSoFar, (double)(int)dataRow[item]);
+
+                minSoFar = Math.Min(minSoFar, (double)dataRow[item]);
+                
             }
             return minSoFar;
         }
@@ -58,7 +60,7 @@ namespace MasterDiploma_FuzzyAssociationRules.AssociativeRules
             double minSoFar = 1;
             foreach (var item in RHS)
             {
-                minSoFar = Math.Min(minSoFar, (double)(int)dataRow[item]);
+                minSoFar = Math.Min(minSoFar, (double)dataRow[item]);
             }
             return minSoFar;
         }

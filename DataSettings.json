@@ -3,7 +3,7 @@
   "rawDataTableName": "Data",
   "shouldFuzzify": "true",
   "usePreComputedRules": "false",
-  "largeItemSetTreshold": "0.8",
+  "largeItemSetTreshold": "0.3",
   "ruleTreshold": "0.2",
   "addFuzzifiedTableToDb": "true",
   "groupRulesByTheirRHS": "true",
