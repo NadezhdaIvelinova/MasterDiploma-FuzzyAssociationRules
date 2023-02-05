@@ -57,8 +57,26 @@ class Program
         if (settings.OutputTopNRules != 0)
             bestRulePairs = bestRulePairs.Take(settings.OutputTopNRules);
 
+        FileStream fs = null;
+
+        if (!string.IsNullOrEmpty(settings.OutputDirectory))
+        {
+            Directory.CreateDirectory(settings.OutputDirectory);
+            fs = new FileStream($"{settings.OutputDirectory}/output.txt", FileMode.OpenOrCreate);
+        }
+        
+        using var sw = !string.IsNullOrEmpty(settings.OutputDirectory)
+            ? new StreamWriter(fs)
+            : null;
+        
         foreach (var rulePair in bestRulePairs)
-            Console.WriteLine($"CF: {rulePair.CertaintyFactor}; Rule: " +
-                $"{string.Join(',', rulePair.Rule.LHS.Items)} => {string.Join(',', rulePair.Rule.RHS.Items)}");
+        {
+            var message = $"CF: {rulePair.CertaintyFactor}; Rule: " +
+                $"{string.Join(',', rulePair.Rule.LHS.Items)} => {string.Join(',', rulePair.Rule.RHS.Items)}";
+            if(!string.IsNullOrEmpty(settings.OutputDirectory)) 
+                sw.WriteLine(message);
+            else 
+                Console.WriteLine(message);
+        }
     }
 }

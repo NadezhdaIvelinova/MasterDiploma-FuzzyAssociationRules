@@ -21,6 +21,7 @@ namespace MasterDiploma_FuzzyAssociationRules
         public int TakeTopNFromEachGroup { get; set; }
         public int OutputTopNRules { get; set; }
         public FuzzyParameter[] FuzzyParameters { get; set; }
+        public string OutputDirectory { get; set; }
         public static DataSettings ReadFromFile(string settingsFilePath)
         {
             using var sr = new StreamReader(settingsFilePath);

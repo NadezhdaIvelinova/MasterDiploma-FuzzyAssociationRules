@@ -3,7 +3,7 @@
   "rawDataTableName": "Data",
   "shouldFuzzify": "true",
   "usePreComputedRules": "false",
-  "largeItemSetTreshold": "0.3",
+  "largeItemSetTreshold": "0.4",
   "ruleTreshold": "0.2",
   "addFuzzifiedTableToDb": "true",
   "groupRulesByTheirRHS": "true",
@@ -63,5 +63,6 @@
         }
       ]
     }
-  ]
+  ],
+  "outputDirectory": "C:\\Users\\nadez\\Desktop\\Masters Diploma v1"
 }
